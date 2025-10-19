@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YantraSamvaad — OpenFOAM CFD Training (Online)</title>
+  <meta name="description" content="YantraSamvaad: Academic, online OpenFOAM CFD training — beginner to advanced modules, hands-on exercises and assessment." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #f6fbfd;
+      --card: #ffffff;
+      --text: #0f1724;
+      --muted: #5b6b79;
+      --blue: #0b5f8a;
+      --teal: #0aa3a3;
+      --accent-dark: #083b52;
+      --radius: 12px;
+      --max-width: 980px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,var(--bg) 0%,#ffffff 60%);
+      color:var(--text);line-height:1.5;padding:28px;display:flex;justify-content:center;
+    }
+    .wrap{width:100%;max-width:var(--max-width);}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px;}
+    .brand{display:flex;gap:14px;align-items:center;}
+    .logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--teal));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;
+      font-family:Merriweather,serif;font-size:20px;}
+    .brand h1{margin:0;font-size:18px;font-weight:700}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+    nav{display:flex;gap:10px;align-items:center}
+    a.btn{padding:10px 14px;border-radius:10px;border:0;font-weight:600;cursor:pointer;text-decoration:none;background:var(--blue);color:white;}
+    a.ghost{padding:8px 12px;border-radius:10px;border:1px solid rgba(11,95,138,0.09);text-decoration:none;color:var(--accent-dark);font-weight:600;}
+    main{display:grid;gap:22px}
+    .hero{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:0 10px 30px rgba(11,95,138,0.06);
+      display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start;}
+    .eyebrow{display:inline-block;background:linear-gradient(90deg,var(--blue),var(--teal));color:white;padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;margin-bottom:12px;}
+    h2{margin:6px 0 10px;font-family:Merriweather,serif;font-size:28px;color:var(--accent-dark);line-height:1.08;}
+    p.lead{margin:0;color:var(--muted);font-size:15px}
+    .hero-info{display:flex;flex-direction:column;gap:10px}
+    .cta-row{display:flex;gap:12px;align-items:center;margin-top:14px}
+    .hero-card{border-radius:10px;padding:18px;background:linear-gradient(180deg,#ffffff,#fbfeff);
+      border:1px solid rgba(10,163,163,0.06);}
+    .hero-card h3{margin:0 0 8px;font-size:16px;color:var(--blue)}
+    .meta{font-size:14px;color:var(--muted);line-height:1.4}
+    section.container{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 22px rgba(11,95,138,0.04)}
+    h3.section-title{margin-top:0;font-size:18px;color:var(--accent-dark)}
+    .columns{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .module{border-radius:10px;padding:14px;background:linear-gradient(180deg,#fff,#fbfdff);
+      border:1px solid rgba(11,95,138,0.04);}
+    .module h4{margin:0 0 8px;font-size:15px;color:var(--blue)}
+    .module p{margin:0;color:var(--muted);font-size:14px}
+    ul.clean{margin:0;padding-left:18px;color:var(--muted)}
+    ul.clean li{margin-bottom:8px}
+    form{display:flex;flex-direction:column;gap:12px}
+    input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);font-size:14px;background:transparent;}
+    textarea{min-height:140px;resize:vertical}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .small{font-size:13px;color:var(--muted)}
+    .success,.error{padding:12px;border-radius:10px;display:none;font-weight:600}
+    .success{background:#ecfdf5;color:#065f46;border:1px solid rgba(6,95,70,0.08)}
+    .error{background:#fff1f2;color:#9f1239;border:1px solid rgba(159,18,57,0.06)}
+    footer{display:flex;justify-content:space-between;align-items:center;padding-top:10px;color:var(--muted);font-size:13px}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.columns{grid-template-columns:1fr}.field-row{grid-template-columns:1fr}}
+    @media (max-width:520px){body{padding:14px}h2{font-size:22px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><div class="logo">YS</div><div><h1>YantraSamvaad</h1><p>OpenFOAM CFD Training — Online</p></div></div>
+      <nav><a class="ghost" href="#about">About</a><a class="ghost" href="#modules">Modules</a><a class="btn" href="#register">Register</a></nav>
+    </header>
+    <main>
+      <section class="hero"><div class="hero-info"><span class="eyebrow">OpenFOAM Training — Online</span>
+        <h2>Professional OpenFOAM CFD training — from fundamentals to advanced practice</h2>
+        <p class="lead">A structured, academically-oriented online course series that equips engineers and researchers with practical OpenFOAM skills: case setup, solver selection, meshing strategies, turbulence modelling, and validation workflows.</p>
+        <div class="cta-row"><a class="btn" href="#register">Register Interest</a><a class="ghost" href="#modules">View Modules</a></div>
+        <div class="small"><strong>Format:</strong> Live online workshops with hands-on exercises · <strong>Schedule:</strong> Cohort-based (weekend only)</div>
+      </div>
+      <aside class="hero-card"><h3>Course at a glance</h3><p class="meta">Duration: 6–12 weeks (depending on track) · Delivery: Live online sessions, code notebooks, and graded assignments · Mode: Instructor-led with practical sessions.</p>
+      <div><strong style="color:var(--teal)">Who should attend</strong>
+        <ul class="clean"><li>Engineers and researchers seeking practical CFD skills</li><li>Graduates and PhD students working on fluid simulations</li><li>Practitioners migrating workflows to OpenFOAM</li></ul></div></aside></section>
+
+      <section id="about" class="container"><h3 class="section-title">About this training</h3>
+        <p class="small">YantraSamvaad's OpenFOAM training is designed with an academic rigor and practical orientation. Participants learn how to select solvers, prepare meshes, implement boundary conditions, run transient and steady simulations, and validate results through systematic workflows.</p>
+        <div class="columns"><div><h4 style="margin:0 0 8px;color:var(--blue)">Learning outcomes</h4>
+        <ul class="clean"><li>Understand OpenFOAM architecture and common solvers</li><li>Set up CFD cases from geometry to post-processing</li><li>Apply turbulence modelling and mesh refinement strategies</li><li>Develop validation and verification approaches</li></ul></div></div>
+      </section>
+
+      <section id="modules" class="container"><h3 class="section-title">Course modules (Representative  - can be tweaked as per user requirements)</h3>
+        <div class="columns">
+          <article class="module"><h4>Beginner — Foundations (Track A)</h4>
+            <p class="small">Introduction to CFD concepts and OpenFOAM fundamentals. Ideal for participants new to CFD or new to OpenFOAM.</p>
+            <ul class="clean"><li>OpenFOAM installation & environment</li><li>Case structure: blockMesh, boundary conditions</li><li>Simple solvers: Single Phase Flows, Simple Heat Transfer etc. </li><li>Post-processing with ParaView</li></ul></article>
+
+          <article class="module"><h4>Intermediate — Practical Workflows (Track B)</h4>
+            <p class="small">Hands-on workflows for common engineering problems and improved result reliability.</p>
+            <ul class="clean"><li>Meshing strategies and refinement-snappyHexMesh</li><li>Turbulence models and solver choices</li><li>Transient simulations and stability</li><li>Conjugate heat transfer and multiphase flows</li></ul></article>
+
+          <article class="module"><h4>Advanced — Customisation & Optimization (Track C)</h4>
+            <p class="small">Advanced topics for research and production workflows, including solver customization and HPC considerations.</p>
+            <ul class="clean"><li>Custom boundary conditions and function objects</li><li>Parallel runs and performance tuning</li><li>Solver development and debugging</li><li>Programming Libraries from Scratch</li></ul></article>
+        </div>
+      </section>
+
+      <section id="register" class="container"><h3 class="section-title">Register your interest / Contact</h3>
+        <p class="small">Complete the form below to receive cohort dates, fees and registration instructions. You may also email us directly at <strong><a href="mailto:yantrasamvaad@gmail.com">yantrasamvaad@gmail.com</a></strong>.</p>
+        <form id="contactForm" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+          <div class="field-row"><input type="text" name="name" placeholder="Full name" required><input type="email" name="email" placeholder="Email address" required></div>
+          <input type="text" name="organization" placeholder="Organization (optional)">
+          <select name="track"><option value="Beginner">Beginner</option><option value="Intermediate">Intermediate</option><option value="Advanced">Advanced</option></select>
+          <textarea name="message" placeholder="Tell us briefly about your CFD experience and goals" required></textarea>
+          <button type="submit" class="btn">Send inquiry</button>
+        </form>
+      </section>
+    </main>
+    <footer><div>© <span id="year"></span> YantraSamvaad — OpenFOAM Training</div>
+    <div class="small">Host on GitHub Pages • Contact: <a href="mailto:yantrasamvaad@gmail.com">yantrasamvaad@gmail.com</a></div></footer>
+  </div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
