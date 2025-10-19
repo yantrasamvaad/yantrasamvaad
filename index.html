@@ -111,13 +111,22 @@
 
       <section id="register" class="container"><h3 class="section-title">Register your interest / Contact</h3>
         <p class="small">Complete the form below to receive cohort dates, fees and registration instructions. You may also email us directly at <strong><a href="mailto:yantrasamvaad@gmail.com">yantrasamvaad@gmail.com</a></strong>.</p>
-        <form id="contactForm" method="POST" action="https://formspree.io/f/xyznvjge">
-          <div class="field-row"><input type="text" name="name" placeholder="Full name" required><input type="email" name="email" placeholder="Email address" required></div>
-          <input type="text" name="organization" placeholder="Organization (optional)">
-          <select name="track"><option value="Beginner">Beginner</option><option value="Intermediate">Intermediate</option><option value="Advanced">Advanced</option></select>
-          <textarea name="message" placeholder="Tell us briefly about your CFD experience and goals" required></textarea>
-          <button type="submit" class="btn">Send inquiry</button>
-        </form>
+        <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/xyznvjge"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
       </section>
     </main>
     <footer><div>© <span id="year"></span> YantraSamvaad — OpenFOAM Training</div>
